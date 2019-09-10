@@ -33,11 +33,13 @@ body
 {
     text-decoration: none;
     color: rgba(0, 0, 0, 0.75);
-    /*jack*/
-    transition: all .2s linear;
-    height: 1.4rem;
-    width: max-content;
-    margin: 35px auto 0 auto;
+    transition: all .2s ease;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.75);
+}
+
+#nav a:hover
+{
+    border-color: rgba(0, 0, 0, 0.75);
 }
 
 #close-btn, #menu-btn
@@ -316,24 +318,6 @@ p
         min-width: 100%;
         margin-top: 60px;
     }
-}
-
-#nav a::after
-{
-    content: '';
-    margin-top: .3rem;
-    display: inline-block;
-    width: 0;
-    opacity: .7;
-    height: 2px;
-    background: #000;
-    transition: width .3s;
-}
-
-#nav a:hover::after
-{
-    opacity: 1;
-    width: 100%;
 }
 
 #mobile-nav.hidden
