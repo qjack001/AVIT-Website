@@ -34,12 +34,12 @@ body
     text-decoration: none;
     color: rgba(0, 0, 0, 0.75);
     transition: all .2s ease;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.75);
+    border-bottom: 2px solid rgba(0, 0, 0, 0);
 }
 
 #nav a:hover
 {
-    border-color: rgba(0, 0, 0, 0.75);
+    border-color: rgba(0, 0, 0, 0.6);
 }
 
 #close-btn, #menu-btn
@@ -118,6 +118,13 @@ h2
 h3
 {
     color: #00A9CE;
+}
+
+h6
+{
+    font-size: 1.5rem;
+    color: rgba(0, 0, 0, 0.8);
+    margin: 20px 0;
 }
 
 p
@@ -252,9 +259,16 @@ p
     padding-top: 60px;
 }
 
+#contact
+{
+    padding-bottom: 30px;
+    margin-top: 60px;
+}
 
-
-
+#contact a
+{
+    color: rgba(0, 0, 0, 0.5);
+}
 
 @media screen and (max-width: 1000px)
 {
