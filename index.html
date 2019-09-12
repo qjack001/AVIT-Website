@@ -15,11 +15,16 @@
         <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#00A9CE">
         <link href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap" rel="stylesheet">
+        <noscript>
+            <style>
+                header { box-shadow: 0px 3px 20px 0 rgba(0, 0, 0, 0.15); }
+            </style>
+        </noscript>
     </head>
     
     <body class="loaded">
-        <header>
-            <svg id="logo" xmlns="http://www.w3.org/2000/svg" width="100" height="66" viewBox="0 0 556 166">
+        <header id="header">
+            <svg id="logo" xmlns="http://www.w3.org/2000/svg" width="150" height="66" viewBox="0 0 556 166">
                 <g id="Group_1" data-name="Group 1" transform="translate(-212 -337)">
                     <path id="Path_3" data-name="Path 3" d="M0,149V16a16,16,0,1,1,32,0V149a16,16,0,0,1-32,0Z" transform="translate(559 338)" fill="#00a9ce"/>
                     <path id="Path_4" data-name="Path 4" d="M54,149V32H16A16,16,0,0,1,16,0H126a16,16,0,0,1,0,32H86V149a16,16,0,0,1-32,0Z" transform="translate(622 338)" fill="#00a9ce"/>
@@ -128,8 +133,21 @@
                 m.className = "";
             }
             
+            function scrollHeader()
+            {
+                if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) 
+                {
+                    document.getElementById("header").className = "scrolled";
+                } 
+                else 
+                {
+                    document.getElementById("header").className = "";
+                }
+            }
+            
             function showPage() {document.body.className = "loaded";}
             window.addEventListener("load", showPage);
+            window.onscroll = function() { scrollHeader() };
         </script>
     </body>
 </html>
